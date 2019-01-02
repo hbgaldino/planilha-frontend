@@ -5,8 +5,6 @@ import { MonthsOptions } from '../util';
 
 class WorksheetFiller extends Component {
 
-    
-
     constructor() {
         super();
 
@@ -14,7 +12,7 @@ class WorksheetFiller extends Component {
             username: "",
             password: "", 
             file: null,
-            month: new Date().getMonth()
+            month: (new Date().getMonth() + 1)
         };
         
        //binding to make 'this' work on method
