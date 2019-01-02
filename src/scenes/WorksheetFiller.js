@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, GridTitle, GridSubTitle, Row, Column } from '../containers';
-import { Input, Select } from '../components';
+import { Input, Select, Buttom } from '../components';
 import { MonthsOptions } from '../util';
 
 class WorksheetFiller extends Component {
@@ -20,6 +20,7 @@ class WorksheetFiller extends Component {
                         <Input type="file" id="file" label="Arquivo"></Input>
                         <Select label="Mês" id="month" items={MonthsOptions}></Select>
                     </Column>
+                    <Buttom type="submit">Gerar!</Buttom>
                 </Row>
             </Grid>
         );
