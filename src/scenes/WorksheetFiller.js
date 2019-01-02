@@ -5,9 +5,27 @@ import { MonthsOptions } from '../util';
 
 class WorksheetFiller extends Component {
 
-    render() {
-        
+    
 
+    constructor() {
+        super();
+
+        this.state = {
+            username: "",
+            password: "", 
+            file: null,
+            month: new Date().getMonth()
+        };
+        
+       //binding to make 'this' work on method
+       this.fillWorkbook = this.fillWorkbook.bind(this);
+    }
+
+    fillWorkbook() {
+        console.log(this.state);
+    }
+
+    render() {
         return (
             <Grid>
                 <GridTitle>Planilha Generator 2.1</GridTitle>
@@ -20,7 +38,7 @@ class WorksheetFiller extends Component {
                         <Input type="file" id="file" label="Arquivo"></Input>
                         <Select label="Mês" id="month" items={MonthsOptions}></Select>
                     </Column>
-                    <Buttom type="submit">Gerar!</Buttom>
+                    <Buttom type="submit" onClick={this.fillWorkbook}>Gerar!</Buttom>
                 </Row>
             </Grid>
         );
