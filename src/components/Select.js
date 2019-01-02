@@ -18,7 +18,7 @@ const Select = (props) => (
         <label htmlFor={props.id}>{ props.label }</label>
         <select {...props} style={selectStyle}>
             { 
-                props.items.map((item) => (<option label={item.label} value={item.value}></option>)) 
+                props.items.map((item) => (<option label={item.label} key={item.value} value={item.value}></option>)) 
             }
         </select>
     </div>
