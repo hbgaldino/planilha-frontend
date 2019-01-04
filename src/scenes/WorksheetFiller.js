@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, GridTitle, GridSubTitle, Row, Column } from '../containers';
 import { Input, Select, Buttom } from '../components';
 import { MonthsOptions } from '../util';
+import Loader from '../components/Loader';
 
 class WorksheetFiller extends Component {
 
@@ -45,6 +46,7 @@ class WorksheetFiller extends Component {
                     </Column>
                     <Buttom type="submit" onClick={this.fillWorkbook}>Gerar!</Buttom>
                 </Row>
+                <Loader />
             </Grid>
         );
     }
